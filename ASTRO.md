@@ -49,3 +49,7 @@ Astro es una herramienta poderosa para construir sitios web rápidos y eficiente
 ```astro
 yarn astro add --help
 ```
+
+# Añadir : fetching de datos  y tipos en Typescript
+
+![Tux, the Linux mascot](/src//assets/images/image.png)
