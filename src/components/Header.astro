@@ -1,10 +1,10 @@
 ---
 import HeaderButton from "./HeaderButton.astro";
-
+import {Counter} from "../components/Counter.tsx"
 
 ---
 
-<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+<header transition:persist class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
     <div class="mx-auto text-center mb-8 lg:mb-16">
         <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
             Space Launches
@@ -14,24 +14,27 @@ import HeaderButton from "./HeaderButton.astro";
         </p>
     </div>
 
+    <Counter client:visible />
+    <Counter client:visible />
+    
     <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
         <HeaderButton href="/" class="text-white">
             <svg 
             slot="before"
-             width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rocket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rocket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
             Ultimos lanzamientos
         </HeaderButton>
         <HeaderButton href="/about" class="text-white">
             <svg
             slot="before"
             width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-info-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M12 9h.01" /><path d="M11 12h1v4h1" />
-         </svg>Sobre el proyecto
-           
+            </svg>Sobre el proyecto
+        
         </HeaderButton>
         <HeaderButton href="/oldest" class="text-white">
             <svg
             slot="before"
-             width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.931 13.111a9 9 0 1 0 -9.453 7.874" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /><path d="M12 7v5l2 2" /></svg>
+                width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.931 13.111a9 9 0 1 0 -9.453 7.874" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /><path d="M12 7v5l2 2" /></svg>
             Los mas viejos
         </HeaderButton>
     </nav>
